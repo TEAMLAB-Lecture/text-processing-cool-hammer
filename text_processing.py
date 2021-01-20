@@ -60,7 +60,16 @@ def no_vowels(input_string):
     """
     no_vowel_string = input_string
     
+    # 방법 1
     for vowel in 'aeiouAEIOU':
         no_vowel_string = no_vowel_string.replace(vowel, '')
+    
+    # 방법 2
+    temp = []
+    for ch in input_string:
+        if ch not in 'aeiouAEIOU':
+            temp.append(ch)
+    
+    no_vowel_string = ''.join(temp)
     
     return no_vowel_string
